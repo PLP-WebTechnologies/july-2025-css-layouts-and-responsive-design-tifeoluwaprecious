@@ -1,0 +1,145 @@
+<! Styles for the code>
+
+/* ========== Global Styles ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f0f8ff; /* calm light-blue */
+  color: #333;
+}
+
+/* ========== Header with Flexbox ========== */
+.header {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #2e8b57; /* calming green */
+  color: #fff;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #ffd700; /* gold hover */
+}
+
+/* ========== Hero Section ========== */
+.hero {
+  text-align: center;
+  padding: 2rem;
+  background: #e6f2ff;
+}
+
+/* ========== Main Content Grid with Sidebar ========== */
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr; 
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.content {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.sidebar {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.sidebar ul {
+  list-style: disc inside;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #2e8b57;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* ========== Flexbox Cards ========== */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  flex: 1 1 30%;
+  background: #f0fff0;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* ========== Footer ========== */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2e8b57;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+/* ========== Media Queries ========== */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-container {
+    flex-direction: column;
+  }
+
+  .hero {
+    padding: 1rem;
+  }
+}
